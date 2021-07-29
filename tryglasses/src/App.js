@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+
+import TryGlasses from './TryGlasses/TryGlasses';
 /* import 'bootstrap/dist/css/bootstrap.min.css'; */
-import DanhSachKinh from './DanhSachKinh/DanhSachKinh';
+
 
 function App() {
   return (
     <div className="App">
-      <DanhSachKinh/>
+      
+      <TryGlasses/>
+      
     </div>
   );
 }
