@@ -17,7 +17,7 @@ export default class TryGlasses extends Component {
     }
     RenderListGlass =()=>{
         return DataGlass.map((Glass, index) => {
-            return <div className="col-3" key={index} onClick={() => this.handleClick(Glass.id)}>
+            return <div className="col-3 "  key={index} onClick={() => this.handleClick(Glass.id)}>
                 <img src={Glass.url} alt="" style={{ width: "100px" }} />
                 
             </div>
@@ -40,16 +40,18 @@ export default class TryGlasses extends Component {
 
     render() {
         return (
-            <div>
-                <h1 style={{textAlign:"center"}}>Try Glass App</h1>
+            <div style={{backgroundImage:"url(./glassesImage/background.jpg)",height:"700px"}}>
+                <h1 style={{textAlign:"center", backgroundColor:"rgba(0,0,0,0.5)" ,color:"white"}}>Try Glass App</h1>
                 <div className="container">
-                    <div className="row">
+                    <div className="row" style={{height:"450px"}}>
                         <div className="col-5">{this.RenderModelGlass()}</div>
                         <div className="col-2"></div>
-                        <div className="col-5"></div>
+                        <div className="col-5" style={{height:"450px",backgroundImage:"url(./glassesImage/model.jpg)",backgroundSize:"cover"}}> 
+                        
+                        </div>
                     </div>
 
-                    <div className="row">
+                    <div className="row" style={{backgroundColor:"white", marginTop:"50px",border:"2px solid black"}}>
                     {this.RenderListGlass()}
                     </div>
                     
